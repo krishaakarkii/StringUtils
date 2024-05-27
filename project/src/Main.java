@@ -1,22 +1,18 @@
 /**
- * Main class to start the game.
- *
- * <p>This class contains the main method to start the game.
- * 
- * @author      Krisha Karki
- * @version     2024.05.22
- * @since       17.0
+ * Main class to demonstrate the functionality of the application.
+ * @version 2024.0527 (last modified)
+ * @since 17.0 (minimum Java version)
  */
 public class Main {
-
-    /**
-     * Main method to start the game.
-     *
-     * @param args the command-line arguments
-     */
     public static void main(String[] args) {
-        // Start the game here
-        System.out.println("Game started!");
+        System.out.println("Starting the application...");
+
+        // Create an instance of File1 and call some methods for demonstration
+        File1 file1 = new File1();
+        file1.setValue(10);
+        System.out.println("Value in File1: " + file1.getValue());
+
+        // Continue with other classes as needed
     }
 }
 
