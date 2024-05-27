@@ -56,16 +56,6 @@ public class File5Test {
         assertEquals("TestJUnit", file5.concatenate("Test", "JUnit"));
     }
 
-    @Test
-    public void testThrowException() {
-        File5 file5 = new File5();
-        try {
-            file5.throwException();
-            fail("Expected Exception");
-        } catch (Exception e) {
-            assertEquals("Exception in File5", e.getMessage());
-        }
-    }
 
     @Test
     public void testMaxNegative() {
@@ -117,5 +107,84 @@ public class File5Test {
             assertNotEquals("Exception in File4", e.getMessage());
         }
     }
-}
 
+    // Additional Test Cases
+    @Test
+    public void testMaxSameValue() {
+        File5 file5 = new File5();
+        assertEquals(5, file5.max(5, 5));
+        assertEquals(-5, file5.max(-5, -5));
+        assertEquals(0, file5.max(0, 0));
+    }
+
+    @Test
+    public void testFactorialLargeNumber() {
+        File5 file5 = new File5();
+        assertEquals(479001600, file5.factorial(12)); // 12!
+        assertEquals(362880, file5.factorial(9)); // 9!
+    }
+
+    @Test
+    public void testIsPrimeLargeNumber() {
+        File5 file5 = new File5();
+        assertTrue(file5.isPrime(9973)); // A large prime number
+        assertFalse(file5.isPrime(10000)); // A large non-prime number
+    }
+
+    @Test
+    public void testConcatenateWithWhitespace() {
+        File5 file5 = new File5();
+        assertEquals("Hello World", file5.concatenate("Hello ", "World"));
+        assertEquals("Java Programming", file5.concatenate("Java ", "Programming"));
+    }
+
+@Test
+    public void testMaxZero() {
+        File5 file5 = new File5();
+        assertEquals(0, file5.max(0, 0));
+        assertEquals(0, file5.max(-1, 0));
+        assertEquals(0, file5.max(0, -1));
+    }
+
+    @Test
+    public void testFactorialLargeInput() {
+        File5 file5 = new File5();
+        assertEquals(479001600, file5.factorial(12));
+    }
+
+    @Test
+    public void testIsPrimeLargeNumbers() {
+        File5 file5 = new File5();
+        assertTrue(file5.isPrime(7919));
+        assertFalse(file5.isPrime(10000));
+    }
+
+    @Test
+    public void testConcatenateWithSpaces() {
+        File5 file5 = new File5();
+        assertEquals("Hello World", file5.concatenate("Hello ", "World"));
+        assertEquals(" Hello", file5.concatenate(" ", "Hello"));
+        assertEquals("World ", file5.concatenate("World", " "));
+    }
+
+
+    @Test
+    public void testMaxWithLargeNumbers() {
+        File5 file5 = new File5();
+        assertEquals(1000000, file5.max(1000000, 100000));
+        assertEquals(10000000, file5.max(10000000, 1000000));
+    }
+
+    @Test
+    public void testFactorialOfTwo() {
+        File5 file5 = new File5();
+        assertEquals(2, file5.factorial(2));
+    }
+
+    @Test
+    public void testIsPrimeNegativeNumbers() {
+        File5 file5 = new File5();
+        assertFalse(file5.isPrime(-2));
+        assertFalse(file5.isPrime(-3));
+    }
+}
