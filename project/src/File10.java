@@ -3,6 +3,7 @@
 /**
  * This class contains various string manipulation methods.
  */
+package src;
 public class File10 {
 
     /**

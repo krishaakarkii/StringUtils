@@ -1,6 +1,9 @@
+package src;
+
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+import test.AllTests;
 
 /**
  * Main class to demonstrate the functionality of the application.

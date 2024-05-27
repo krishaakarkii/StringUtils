@@ -1,5 +1,6 @@
 // File7Test.java
-
+package test;
+import src.File7;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
