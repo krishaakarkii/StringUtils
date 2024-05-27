@@ -39,5 +39,37 @@ public class File3Test {
         File3 file3 = new File3();
         file3.throwException();
     }
+@Test
+public void testGetStringLengthMore() {
+    File3 file3 = new File3();
+    assertEquals(11, file3.getStringLength("Hello World"));
+    assertEquals(13, file3.getStringLength("Hello, World!"));
 }
 
+@Test
+public void testToUpperCaseMore() {
+    File3 file3 = new File3();
+    assertEquals("HELLO WORLD", file3.toUpperCase("Hello World"));
+    assertEquals("HELLO, WORLD!", file3.toUpperCase("Hello, World!"));
+}
+
+@Test
+public void testContainsSubstringMore() {
+    File3 file3 = new File3();
+    assertTrue(file3.containsSubstring("Hello World", "Hello"));
+    assertFalse(file3.containsSubstring("Hello World", "hello"));
+}
+
+@Test
+public void testConcatenateIntegersMore() {
+    File3 file3 = new File3();
+    assertEquals("710", file3.concatenateIntegers(7, 10));
+    assertEquals("56", file3.concatenateIntegers(5, 6));
+}
+
+@Test(expected = Exception.class)
+public void testThrowExceptionMore() throws Exception {
+    File3 file3 = new File3();
+    file3.throwException();
+}
+}

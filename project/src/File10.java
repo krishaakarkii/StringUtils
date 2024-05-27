@@ -23,17 +23,20 @@ public class File10 {
      * @param str The string to check
      * @return True if the string is a palindrome, false otherwise
      */
-    public boolean isPalindrome(String str) {
-        int i = 0, j = str.length() - 1;
-        while (i < j) {
-            if (str.charAt(i) != str.charAt(j)) {
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
+      public boolean isPalindrome(String str) {
+    if (str == null || str.isEmpty()) {
+        return false;
     }
+    int i = 0, j = str.length() - 1;
+    while (i < j) {
+        if (str.charAt(i) != str.charAt(j)) {
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
 
     /**
      * Counts the number of words in a string.
@@ -42,8 +45,11 @@ public class File10 {
      * @return The number of words in the string
      */
     public int countWords(String str) {
-        String[] words = str.split("\\s+");
-        return words.length;
+        if (str == null || str.trim().isEmpty()) {
+        return 0;
+    }
+    String[] words = str.split("\\s+");
+    return words.length;
     }
 
     /**

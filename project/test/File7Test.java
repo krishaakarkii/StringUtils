@@ -61,5 +61,93 @@ public class File7Test {
         File7 file7 = new File7();
         file7.throwException();
     }
+
+     @Test
+    public void testSumWithZero() {
+        File7 file7 = new File7();
+        assertEquals(0, file7.max(0, 0));
+        assertEquals(0, file7.max(0, 0));
+        assertEquals(0, file7.max(0, 0));
+    }
+
+    @Test
+    public void testFactorialLargeNumber() {
+        File7 file7 = new File7();
+        assertEquals(479001600, file7.factorial(12)); // 12!
+        assertEquals(362880, file7.factorial(9)); // 9!
+    }
+
+    @Test
+    public void testIsPrimeLargeNumber() {
+        File7 file7 = new File7();
+        assertTrue(file7.isPrime(7919)); // A large prime number
+        assertFalse(file7.isPrime(10000)); // A large non-prime number
+    }
+
+    @Test
+    public void testConcatenateWithWhitespace() {
+        File7 file7 = new File7();
+        assertEquals("Hello World", file7.concatenate("Hello ", "World"));
+        assertEquals("Java Programming", file7.concatenate("Java ", "Programming"));
+    }
+
+    @Test
+    public void testMaxZero() {
+        File7 file7 = new File7();
+        assertEquals(0, file7.max(0, 0));
+        assertEquals(0, file7.max(-1, 0));
+        assertEquals(0, file7.max(0, -1));
+    }
+
+    @Test
+    public void testFactorialLargeInput() {
+        File7 file7 = new File7();
+        assertEquals(479001600, file7.factorial(12));
+    }
+
+    @Test
+    public void testIsPrimeLargeNumbers() {
+        File7 file7 = new File7();
+        assertTrue(file7.isPrime(7919));
+        assertFalse(file7.isPrime(10000));
+    }
+
+    @Test
+    public void testConcatenateWithSpaces() {
+        File7 file7 = new File7();
+        assertEquals("Hello World", file7.concatenate("Hello ", "World"));
+        assertEquals(" Hello", file7.concatenate(" ", "Hello"));
+        assertEquals("World ", file7.concatenate("World", " "));
+    }
+
+      @Test
+    public void testMaxWithLargeNumbers() {
+        File7 file7 = new File7();
+        assertEquals(1000000, file7.max(1000000, 100000));
+        assertEquals(10000000, file7.max(10000000, 1000000));
+    }
+
+    @Test
+    public void testFactorialOfTwo() {
+        File7 file7 = new File7();
+        assertEquals(2, file7.factorial(2));
+    }
+
+    @Test
+    public void testIsPrimeNegativeNumbers() {
+        File7 file7 = new File7();
+        assertFalse(file7.isPrime(-2));
+        assertFalse(file7.isPrime(-3));
+    }
+
+    @Test
+    public void testConcatenateSpecialCharacters() {
+        File7 file7 = new File7();
+        assertEquals("Hello, World!", file7.concatenate("Hello, ", "World!"));
+        assertEquals("!Hello", file7.concatenate("!", "Hello"));
+        assertEquals("World?", file7.concatenate("World", "?"));
+    }
+
+
 }
 
